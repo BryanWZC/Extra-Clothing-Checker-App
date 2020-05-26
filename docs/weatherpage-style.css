@@ -3,15 +3,22 @@
 *{
   background-color: #ee6c4d;
   background: transparent;
+  box-sizing: border-box;
 }
 body{
   background: url('./Images/sunny.jpg') no-repeat left top;
   background-size: cover;
   padding: 0;
   margin: 0;
+  position: relative;
+  min-height: 100vh;
 }
 footer{
   color: #edf2f4;
+  position: absolute;
+  bottom:0;
+  width: 100%;
+  height: 2.5rem;
 }
 
 .heading-wrapper{
@@ -23,7 +30,7 @@ footer{
 #form-wrapper{
   margin: 0 auto;
   text-align: center;
-  height: 100vh;
+  min-height: 90vh;
 }
 
 #logo{
@@ -39,6 +46,7 @@ footer{
   display: flex;
   flex-wrap: wrap;
   margin:0;
+  padding-bottom: 2.9%;
 }
 
 .card {
@@ -89,6 +97,20 @@ label, #input-button{
   color: #edf2f4;
   opacity:0.9;
 }
+input{
+  background-color:#747274;
+  color: white;
+  opacity:0.7;
+}
+#input-button {
+  background-color:#0F0F0F;
+  color: #edf2f4;
+  opacity:0.7;
+}
+
+#h2-wrapper{
+  font-size: 15px;
+}
 
 @media screen and (max-width: 900px) {
   .card {
@@ -97,12 +119,52 @@ label, #input-button{
   }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 770px) {
   body{
     overflow: auto;
   }
+  .container {
+  display: flex;
+  flex-wrap: wrap;
+  margin:0;
+}
   .card {
     width: 60%;
     max-width: 300px;
   }
+
+  #button{
+    font-size: 15px;
+    background-color:#3d5a80;
+    color: #edf2f4;
+    opacity:0.9;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .heading-wrapper{
+    display: inline;
+    opacity:0.8;
+    text-align: center;
+}
+#logo{
+  margin-left: auto;
+  margin-right: auto;
+  display:block;
+}
+
+}
+@media screen and (max-width: 700px){
+  footer{
+    font-size: 12px;
+    height: 2rem;
+  }
+  h2{
+    font-size: 15px;
+  }
+  h1{
+    font-size: 23px;
+  }
+  .container {
+    padding-bottom: 4.5%;
+}
 }
