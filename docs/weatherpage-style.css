@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Proza+Libre:wght@500&display=swap');
+
+*{
+  background-color: #ee6c4d;
+  background: transparent;
+}
+body{
+  background: url('./Images/sunny.jpg') no-repeat left top;
+  background-size: cover;
+  padding: 0;
+  margin: 0;
+}
+footer{
+  color: #edf2f4;
+}
+
+.heading-wrapper{
+  display: flex;
+  opacity:0.8;
+  flex-flow: row;
+}
+
+#form-wrapper{
+  margin: 0 auto;
+  text-align: center;
+  height: 100vh;
+}
+
+#logo{
+  height: 80px;
+  padding: 10px 0 0 0;
+}
+
+#main-heading{
+  padding:0 0 0 10px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin:0;
+}
+
+.card {
+  width: 35%;
+  text-align: center;
+  margin: 5px auto;
+  background-color: #98c1d9;
+  max-width: 300px;
+  border-radius: 5%;
+  box-shadow: -1px 15px 30px -12px black;
+}
+
+.hide{
+  display: none;
+}
+.overflow{
+  overflow: hidden;
+}
+h1, h2, h6{
+  font-family: 'Proza Libre', sans-serif;
+}
+
+p{
+  font-family: 'Montserrat', sans-serif;
+}
+
+input{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+}
+
+label, #input-button{
+  font-family: 'Proza Libre', sans-serif;
+  font-size: 20px;
+}
+
+#button{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  border: none;
+  margin-left: auto;
+  outline: none;
+  cursor:pointer;
+}
+
+#button:hover{
+  background-color:#3d5a80;
+  color: #edf2f4;
+  opacity:0.9;
+}
+
+@media screen and (max-width: 900px) {
+  .card {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  body{
+    overflow: auto;
+  }
+  .card {
+    width: 60%;
+    max-width: 300px;
+  }
+}

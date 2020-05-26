@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="weatherpage-style.css">
+
+  <title>Should I Wear Extra App</title>
+</head>
+<body>
+  <div class='heading-wrapper'>
+    <img id='logo' src='Images/Greenhouse exp col-40.png'>
+    <h1 id='main-heading'>Should I Wear Extra Today?</h1>
+    <button id='button'>Change City & State</button>
+  </div>
+
+  <div id='form-wrapper'>
+    <form id='myForm' autocomplete="off">
+      <label>Type In Your City</label><br>
+      <input type="text" id='cityName' name="cityName"><br>
+      <label>Type In Your Country</label><br>
+      <input type="text" id='state' name="state"><br><br>
+      <input id='input-button' type="submit" name="submit-button" onclick="saveInput()">
+    </form>
+  </div>
+  
+  <div id='root' class='hide'></div>
+  <script src="script.js"></script>
+</body>
+  
+</html>
