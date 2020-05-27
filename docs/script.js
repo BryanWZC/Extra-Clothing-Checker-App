@@ -111,7 +111,7 @@ for (let i in nineHourArr){
   h2Wrapper.style.opacity = 0.8;
 
   const city = document.createElement('h2');
-      city.textContent = `City: ${cityName.toUpperCase()}, ${state.toUpperCase()}`
+      city.textContent = `City: ${cityName.toUpperCase()}`
 
   const h2Head = document.createElement('h2');
       h2Head.textContent = `Extra Clothing: ${sweaterResult}`;
