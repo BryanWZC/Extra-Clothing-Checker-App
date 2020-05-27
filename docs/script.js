@@ -27,6 +27,7 @@ function handleForm(event) {
         var state = document.getElementById("state").value;
 
         var apiCall= `https://api.openweathermap.org/data/2.5/forecast?q=${cityName},${state}&units=${units}&appid=${apiKey}`;
+
 // Get data from Openw Weather
 var request = new XMLHttpRequest(); 
 
@@ -38,7 +39,7 @@ request.onreadystatechange = () => {
 
   var data = JSON.parse(request.responseText);
   var cityName = data.city.name;
-  var state = data.country;
+  state = data.city.country;
 
   if (request.status >= 200 && request.status < 400) {
       arr = data['list'].map(value => { 
@@ -51,7 +52,6 @@ request.onreadystatechange = () => {
  }
 };
 request.send();
-
 
 
 // Thermal equilibrium equation (Wikipedia)
@@ -111,7 +111,7 @@ for (let i in nineHourArr){
   h2Wrapper.style.opacity = 0.8;
 
   const city = document.createElement('h2');
-      city.textContent = `City: ${cityName.toUpperCase()}`
+      city.textContent = `City: ${cityName.toUpperCase()}, ${state.toUpperCase()}`
 
   const h2Head = document.createElement('h2');
       h2Head.textContent = `Extra Clothing: ${sweaterResult}`;
